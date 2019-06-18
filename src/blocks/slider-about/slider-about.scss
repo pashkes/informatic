@@ -1,0 +1,55 @@
+.slider-about {
+
+  &__title {
+    margin-bottom: 0;
+    font-size: 32px;
+    color: #fff;
+    line-height: 1;
+    font-weight: 400;
+
+    @media(min-width: map-get($grid-breakpoints, lg)) {
+      font-size: 50px;
+    }
+  }
+  .tns-nav button {
+    &.tns-nav-active {
+      background-color: #fff;
+    }
+  }
+
+  .nav {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    width: 13px;
+    height: 24px;
+    transform: translateY(-50%);
+
+    &:not(:disabled):hover svg {
+      fill: #2E3966;
+    }
+
+    &.nav-prev {
+      left: 20px;
+    }
+
+    &.nav-next {
+      right: 20px;
+    }
+  }
+  .tns-nav {
+    margin-top: 18px;
+
+    @media(min-width: map-get($grid-breakpoints, lg)) {
+      margin-top: 32px;
+    }
+  }
+
+  &__item {
+    margin-top: 0 !important;
+
+    &::before {
+      display: none;
+    }
+  }
+}

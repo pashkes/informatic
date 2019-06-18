@@ -1,0 +1,153 @@
+// Here goes BEM-block styles  .news-article
+// and it elements, modifier, pseudoselectors, @media-queries...
+
+.news-article {
+  padding: 26px 16px;
+  background: $white;
+
+  &__content {
+    padding-bottom: 32px;
+  }
+  .h4 {
+    font-size: 18px;
+    @media(min-width: map-get($grid-breakpoints, sm)) {
+      font-size: 21px;
+    }
+  }
+
+  figure {
+    margin-top: 16px;
+    margin-bottom: 20px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  figcaption {
+    margin-top: 4px;
+    @extend .text-small;
+    color: $grey;
+  }
+
+  h3 {
+    margin-top: 16px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    @media(min-width: map-get($grid-breakpoints, sm)) {
+      font-size: 21px;
+      margin-bottom: 20px;
+      margin-top: 36px;
+    }
+  }
+
+  h2 {
+    font-size: 18px;
+    line-height: 19px;
+  }
+
+  p + h2 {
+    margin-top: 24px;
+  }
+
+  h2 + p,
+  ul + p,
+  ol + p {
+    margin-top: 1rem;
+  }
+
+  p + ul,
+  p + ol,
+  li + li:not(.social__item) {
+    margin-top: 12px;
+  }
+
+  @media (min-width: map-get($grid-breakpoints, sm)) {
+    padding: 32px 48px;
+
+    figure {
+      margin-top: 20px;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+
+    figcaption {
+      margin-top: 8px;
+    }
+
+
+    h2 {
+      font-size: 30px;
+      line-height: 32px;
+    }
+
+    p + h2 {
+      margin-top: 48px;
+    }
+
+    h2 + p,
+    ul + p,
+    ol + p {
+      margin-top: 38px;
+    }
+
+    p + ul,
+    p + ol,
+    li + li {
+      margin-top: 24px;
+    }
+  }
+
+  @media (min-width: map-get($grid-breakpoints, md)) {
+    padding: 48px 72px 32px;
+
+    p {
+      font-size: 16px;
+      line-height: 27/16;
+    }
+  }
+
+  @media (min-width: map-get($grid-breakpoints, lg)) {
+    padding: 80cdpx 144px 88px;
+  }
+
+  &__read-online {
+    width: 100%;
+    margin-bottom: 16px;
+
+    @media(min-width: map-get($grid-breakpoints, sm)) {
+      margin-bottom: 0;
+      min-width: 380px;
+    }
+  }
+  &__col-button-read {
+    @media(min-width: map-get($grid-breakpoints, sm)) {
+      padding-right: 16px;
+    }
+  }
+
+  &__col-button-download {
+    @media(min-width: map-get($grid-breakpoints, sm)) {
+        padding-left: 16px;
+    }
+  }
+
+  p + ul, p + ol {
+    @media(min-width: map-get($grid-breakpoints, md)) {
+      margin-top: 24px;
+    }
+  }
+  p + p {
+    margin-top: 8px;
+  }
+}

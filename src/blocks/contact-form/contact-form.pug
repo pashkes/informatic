@@ -1,0 +1,55 @@
+mixin contact-form()
+	.row-unbroken.contact-form#contact
+		.col-12.col-md-4
+			section.section.blog-preview.bg-light-grey-3
+				h2.h2 Техническая поддержка
+				p
+				| Если Вы&nbsp;являетесь пользователем лицензионного программного обеспечения нашей компании, Вы&nbsp;можете связаться со&nbsp;Службой технической поддержки компании &laquo;Информатик&raquo;.
+				p Заранее сформулируйте свой вопрос. Это поможет Вам получить наиболее точный и&nbsp;быстрый ответ. Напишите электронное письмо, приложив все данные об&nbsp;ошибке (логи, скриншоты и&nbsp;т.д.).
+				a(href="mailto:support@informatic.ru").contact-form__link.link.link-dark support@informatic.ru
+				a(href="tel:+74952661866").contact-form__link.link.link-dark +7 (495) 266 18 66
+				span с&nbsp;10:00 до&nbsp;18:00 по&nbsp;Мск
+		.col-12.col-md-8
+			article.section.bg-white
+				.d-flex.justify-content-between.align-items-center
+					h2.contact-form__title.h2(id="feedbackDialogTitle") Написать нам
+				form(action="#" name="form-contact" id="form-contact" novalidate)
+					.form-row
+						.form-col
+							.form-group
+								label.visually-hidden(for="contact-name") Представьтесь, пожалуйста*
+								input.form-control(type="text" id="contact-name" placeholder="Представьтесь, пожалуйста*" autocomplete="name" required)
+								.form-control-error(data-error data-error-empty="Обязательное поле") Обязательное поле
+							.form-group
+								label.visually-hidden(for="contact-email") Электронная почта*
+								input.form-control(type="email" id="contact-email" pattern="^[A-Za-z0-9._%+-]+@{1}([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}$" placeholder="Электронная почта*" autocomplete="email"  required)
+								.form-control-error(data-error data-error-empty="Обязательное поле" data-error-wrong="Неверное значение") Обязательное поле
+							.form-group
+								label.visually-hidden(for="contact-tel") Телефон
+								input.form-control(type="tel" id="contact-tel" autocomplete="tel" placeholder="Телефон")
+						.form-col
+							.form-group
+								.form-control-select
+									label.visually-hidden(for="contact-theme") Выберите тему сообщения
+									select(data-custom-select name="contact-theme" id="contact-theme")
+										option(placeholder) Выберите тему сообщения
+										option(value="1") Сообщить о проблеме
+										option(value="2") Как пройти в библиотеку?
+										option(value="3") Другое...
+							.form-group.form-group-textarea
+								label.visually-hidden(for="contact-message") Введите текст сообщения
+								textarea.form-control(id="contact-message" placeholder="Введите текст сообщения")
+							.form-group.form-group-file
+								input.visually-hidden(type="file" id="contact-file" data-custom-fileupload)
+								label.form-control-file(for="contact-file")
+									+icon('clip', 15, 16)
+									span(data-choose-file="Прикрепить файл") Прикрепить файл
+						.form-col
+							.form-group
+								p Поля отмеченные * (звездочкой) являются обязательными для заполнения
+						.form-col
+							.form-group
+								p Нажимая на кнопку «Отправить», я даю согласие #[a.link.link-dark(href="#") на обработку персональных данных] и соглашаюсь с политикой конфиденциальности
+							.form-group.form-group-submit
+								button(type="submit").contact-form__submit.btn.btn-primary отправить
+

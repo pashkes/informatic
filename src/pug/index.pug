@@ -1,0 +1,111 @@
+extends template/template
+
+block title
+	title Информатик | main
+
+block main
+	main.main
+		+site-head-main()
+		.container#solutions
+			.overlay-block
+				+odds()
+		.container#about
+			.row-unbroken
+				.col-12.col-md-8
+					section.section.bg-white.section--main
+						h2.h2 О компании
+						p Компания &quot;ИНФОРМАТИК&laquo;с самого своего основания в&nbsp;1989 году разрабатывает и&nbsp;реализует решения в&nbsp;области лингвистических технологий.
+						p В&nbsp;настоящее время компания является одним из&nbsp;ведущих разработчиков лингвистических программ. Продукты компании &laquo;ИНФОРМАТИК&raquo; давно пользуются заслуженной популярностью и&nbsp;признанием во&nbsp;многих странах мира.
+						p Лингвистические системы компании &laquo;ИНФОРМАТИК&raquo; используют такие государственные и&nbsp;учебные учреждения, как Аппарат Президента РФ, Государственная Дума РФ, Государственный Департамент США, NASA, ведущие университеты: Гарвардский, Принстонский, Йельский и&nbsp;другие.
+				.col-12.col-md-4.bg-accent-3
+					section.section.text-center.section--main.section--sale
+						+slider-about()
+
+		.bg-accent-1.overlay-block#products
+			.container
+				+products()
+		.container
+			.overlay-block
+				.row-unbroken
+					.col-12.col-lg-4
+						section.section.bg-white
+							h2.h2 Лицензирование для&nbsp;организаций
+							p
+								| Покупая лицензии на&nbsp;наши продукты, Вы&nbsp;платите только за&nbsp;лицензионные права. Носители для установки продукта предоставляются бесплатно. Один носитель может быть использован в&nbsp;качестве эталона для установки, что позволяет не&nbsp;только сократить расходы, но&nbsp;и&nbsp;устранить сложности, связанные с&nbsp;установкой.
+					.col-12.col-lg-4
+						section.section.bg-light-grey-2
+							h2.h2 Стоимость лицензий
+							p
+								| Стоимость лицензий определяется количеством рабочих станций&nbsp;&mdash; чем больше рабочих станций, тем большую скидку может получить при покупке организация. Для государственных и&nbsp;учебных организаций, предоставляется дополнительная скидка на&nbsp;лицензии всех наших продуктов.
+					.col-12.col-lg-4.row-gap-upto-lg
+						section.section.bg-accent-3
+							h2.h2 Обновление
+							p
+								| Если Вы&nbsp;являетесь зарегистрированным пользователем наших продуктов, Вы&nbsp;можете сделать обновление (upgrade) старой версии на&nbsp;новую с&nbsp;50% скидкой от&nbsp;стоимости новой версии
+				.row-unbroken.row-gap
+					.col-12.col-lg-8
+						section.section.blog-preview.bg-white
+							.blog-preview__top
+								.blog-preview__content
+									h2.h2 ОРФО Online
+									p
+										| Система ОРФО поможет проверить орфографию в&nbsp;текстах на&nbsp;русском, украинском, английском, немецком, французском, испанском, итальянском и&nbsp;португальском языках.
+										| Проверка орфографии осуществляется в&nbsp;Microsoft Office 2007&nbsp;&mdash; 2016, Libre Office&nbsp;3.3&nbsp;&mdash; 4.x, Open Office&nbsp;3.6&nbsp;&mdash; 4.x, собственном ОРФО-редакторе, большинстве редактируемых окон по&nbsp;&laquo;горячим клавишам&raquo; (Блокнот, WordPad, ICQ и&nbsp;т.д.). По&nbsp;сравнению с&nbsp;модулем проверки орфографии русского языка в&nbsp;Microsoft Office 2010, в&nbsp;ОРФО включен показ всех форм любого слова, дополнены и&nbsp;обновлены орфографические словари.
+							.blog-preview__footer
+								a.link-arrow(href='news-page.html', aria-label='перейти')
+									+icon('arrow-next', 24, 24)
+									span перейти к сервису
+					.col-12.col-lg-4.row-gap-upto-lg
+						section.section.blog-preview.bg-light-grey-2
+							.blog-preview__top
+								.blog-preview__content
+									h2.h2 Словари Online
+									p Электронный словарь КОНТЕКСТ организован так, чтобы работа с&nbsp;ним была максимально быстрой и&nbsp;удобной. Контекст&nbsp;&mdash; это система профессиональных электронных словарей, которая обладает развитой и&nbsp;удобной программной оболочкой.
+							.blog-preview__footer
+								a.link-arrow.link-arrow(href='news-page.html', aria-label='перейти')
+									+icon('arrow-next', 24, 24)
+									span перейти к сервису
+		.bg-accent-1.overlay-block#for-developers
+			.container
+				+opportunities()
+		.overlay-block
+			.container
+				.row-unbroken
+					.col-12.col-lg-8
+						section.section.blog-preview.bg-white
+							.blog-preview__top
+								.blog-preview__content
+									h2.h2 OEM решения для разработчиков
+									p
+										| Компания &laquo;Информатик&raquo; предлагает для разработчиков программные морфологические модули, которые предназначены для решения широкого класса задач, требующих средств поиска и&nbsp;анализа текстовой информации. Например, информационно-поисковые системы, аналитические системы и&nbsp;каталоги электронных документов.
+									p В&nbsp;морфологических модулях компании &laquo;Информатик&raquo; используются передовые технологии обработки текста, лингвистические и&nbsp;математические алгоритмы, которые могут быть использованы для контекстного поиска документов с&nbsp;учетом всех словоформ, нахождения синонимов, проверки грамматики, проверки орфографии и&nbsp;для решения задач, построенных на&nbsp;основе анализа информационных массивов.
+					.col-12.col-lg-4.row-gap-upto-lg
+						section.section.blog-preview.bg-light-grey-2
+							.blog-preview__top
+								.blog-preview__content
+									h2.h2 Стоимость модулей для разработчиков
+									p Стоимость лицензии на&nbsp;использование морфологической библиотеки определяется конкретным набором лицензируемых модулей, технической поддержки, необходимостью модификаций, консультаций и&nbsp;сопровождения.
+		.container#partners
+			.row-unbroken.row-gap
+				.col-12
+					section.section.bg-white.text-center
+						.section__content
+							h2.h2 Информация для партнеров
+							p
+								| Компания &laquo;Информатик&raquo; приглашает к&nbsp;сотрудничеству заинтересованные организации. Если Ваша организация распространяет программные продукты оптом и&nbsp;в&nbsp;розницу, является Интернет&nbsp;&mdash; магазином, имеет торговые площади в&nbsp;компьютерных и&nbsp;книжных магазинах.
+							p
+								| Мы&nbsp;готовы предложить Вам выгодные условия сотрудничества. Для наших партнеров мы&nbsp;предлагаем, программные продукты компании &laquo;Информатик&raquo;, лицензии для корпоративных решений, ОЕМ&nbsp;&mdash; версии наших продуктов для производителей компьютерной техники.
+						ul.partners
+							li
+								img(src="img/logo-partner-1.jpg" alt="Логотип Allsoft" width="116" height="32")
+							li
+								img(src="img/logo-partner-2.jpg" alt="Логотип Softline" width="145" height="32")
+							li
+								img(src="img/logo-partner-3.jpg" alt="Логотип SoftKey" width="68" height="48")
+							li
+								img(src="img/logo-partner-4.jpg" alt="Логотип Техновер" width="169" height="32")
+			+faq().row-gap#support
+			+contact-form()
+
+
+

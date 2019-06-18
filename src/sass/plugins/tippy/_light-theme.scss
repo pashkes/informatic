@@ -1,0 +1,47 @@
+.tippy-tooltip.light-theme {
+  color: #383838;
+  box-shadow: 0px 0px 8px rgba(56, 56, 56, 0.15);
+  background-color: #F5F5F5;
+  border: 1px solid #E5E9E9;
+}
+
+
+.tippy-tooltip.light-theme[x-placement^=top] .tippy-arrow {
+  border-top: 8px solid #F5F5F5;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  filter: drop-shadow(0 2px 0 #E5E9E9);
+}
+
+.tippy-tooltip.light-theme[x-placement^=bottom] .tippy-arrow {
+  border-bottom: 8px solid #F5F5F5;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  filter: drop-shadow(0 -2px 0 #E5E9E9);
+}
+
+.tippy-tooltip.light-theme[x-placement^=left] .tippy-arrow {
+  border-left: 8px solid #F5F5F5;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  filter: drop-shadow(2px 0 0 #E5E9E9);
+}
+
+.tippy-tooltip.light-theme[x-placement^=right] .tippy-arrow {
+  border-right: 8px solid #F5F5F5;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  filter: drop-shadow(-2px 0 0 #E5E9E9);
+}
+
+.tippy-tooltip.light-theme .tippy-backdrop {
+  background-color: #F5F5F5
+}
+
+.tippy-tooltip.light-theme .tippy-roundarrow {
+  fill: #F5F5F5
+}
+
+.tippy-tooltip.light-theme[data-animatefill] {
+  background-color: transparent
+}

@@ -1,0 +1,41 @@
+mixin header(url="relative")
+	header().header&attributes(attributes)
+		.container
+			.header__inner
+				a(href="index.html").header__logo
+					img(src="img/logo.svg" width="135" height="13" alt="логотип Информатик")
+				nav(data-scroll-header).header__main-nav
+					button(type="button" aria-controls="menu" aria-haspopup="true" aria-expanded="false" title="Главное меню").header__open-menu.js-toggle-menu
+					.header__menu#menu
+						.header__body
+							.container
+								ul.header__list
+									li.header__item
+										a(href=url==='relative' ? "#solutions":'index.html#solutions').header__link oem Решения
+									li.header__item
+										a(href=url==='relative' ? "#about":'index.html#about').header__link о компании
+									li.header__item
+										a(href=url==='relative' ? "#products":'index.html#products').header__link.services
+											| продукты
+									li.header__item
+										a(href=url==='relative' ? "#for-developers":'index.html#for-developers').header__link разработчикам
+									li.header__item
+										a(href=url==='relative' ? "#partners":'index.html#partners').header__link партнеры
+									li.header__item
+										a(href=url==='relative' ?"#support":'index.html#support').header__link поддержка
+									li.header__item
+										a(href=url==='relative' ? "#contact":'index.html#contact').header__link контакты
+									li.header__item.select-lang
+										button(type="button" aria-haspopup="true" aria-expanded="false" id="select-language").header__link.js-submenu
+											| Русский
+											+icon('arrow-right-small', 7, 7).header__arrow
+										ul(aria-labelledby="select-language").header__sublist
+											li.header__subitem
+												a(href="#").header__sublink English
+											li.header__subitem
+												a(href="#").header__sublink украинский
+					ul.header__langs
+						li.is-active
+							a(href="#") Рус
+						li
+							a(href="#") en

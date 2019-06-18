@@ -1,0 +1,99 @@
+// Here goes BEM-block styles  .odds
+// and it elements, modifier, pseudoselectors, @media-queries...
+.odds {
+  padding-bottom: 32px;
+  margin-bottom: 24px;
+  @media (min-width: map-get($grid-breakpoints, sm)) {
+    margin-bottom: 48px;
+  }
+  &__title {
+    text-align: center;
+  }
+
+  .odds__subtitle {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 858px;
+    @media(min-width: map-get($grid-breakpoints, sm)) {
+      margin-top: 16px;
+    }
+  }
+  .tns-nav button {
+    background-color: #d1d1d1;
+    &.tns-nav-active {
+      background-color: #6a7fd4;
+    }
+  }
+
+
+  &__items-wrap {
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__items {
+    display: flex;
+  }
+
+  @media (min-width: map-get($grid-breakpoints, md)) {
+    padding-bottom: 0;
+
+    &__items-wrap {
+      max-width: none;
+    }
+
+    &__item {
+      flex: 1 1 calc(100%/3);
+      max-width: calc(100%/3);
+
+      &+.odds__item {
+        box-shadow: -1px 0 0 0 $light-grey-2;
+      }
+    }
+  }
+}
+
+.odds-item {
+  padding: 32px 24px 0;
+  text-align: center;
+
+  &__title {
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  &__media {
+    margin-bottom: 24px;
+
+    svg, img {
+      margin-left: auto;
+      margin-right: auto;
+      width: auto;
+      height: 88px;
+    }
+  }
+
+  @media (min-width: map-get($grid-breakpoints, md)) {
+    padding-bottom: 32px;
+  }
+
+  @media (min-width: map-get($grid-breakpoints, lg)) {
+    padding: 56px 48px 56px;
+
+    &__title {
+      margin-bottom: 12px;
+    }
+
+    &__media {
+      margin-bottom: 48px;
+
+      svg, img {
+        width: auto;
+        height: 105px;
+      }
+
+    }
+  }
+
+}

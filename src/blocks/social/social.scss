@@ -1,0 +1,36 @@
+.social {
+  display: inline-flex;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    margin-right: 32px;
+    padding-left: 0;
+    overflow: hidden;
+
+    &::before {
+      display: none;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      .icon {
+        fill: $accent-2;
+      }
+    }
+
+    .icon {
+      fill: white;
+      transition: fill 0.15s ease-in-out;
+    }
+  }
+}

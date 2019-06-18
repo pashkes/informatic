@@ -1,0 +1,94 @@
+include ../mixins/images
+include ../../blocks/header/header
+include ../../blocks/site-head-main/site-head-main
+include ../../blocks/footer/footer
+include ../../blocks/social/social
+include ../../blocks/site-head-main/site-head-main
+include ../../blocks/opportunities/opportunities
+include ../../blocks/odds/odds
+include ../../blocks/faq/faq
+include ../../blocks/news-article/news-article
+include ../../blocks/products-slider/products-slider
+include ../../blocks/slider-about/slider-about
+include ../../blocks/products/products
+include ../../blocks/contact-form/contact-form
+
+
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="canonical" href="#")
+    block description
+      meta(name="description", content="Put your description here.")
+    block ogMetaTags
+      meta(property="og:title" content="")
+      meta(property="og:url" content="")
+      meta(property="og:description" content="")
+      //- site_name
+      meta(property="og:site_name" content="")
+      //- img link loaded on server
+      meta(property="og:image" content="")
+    block favicons
+      link(rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png")
+      link(rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png")
+      link(rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png")
+      link(rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png")
+      link(rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png")
+      link(rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png")
+      link(rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png")
+      link(rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png")
+      link(rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png")
+      link(rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png")
+      link(rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png")
+      link(rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png")
+      link(rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png")
+      link(rel="shortcut icon" href="img/favicon/favicon.ico")
+    block pwa
+      link(rel="manifest" href="assets/manifest.json")
+      meta(name="application-name" content="Orfo")
+      meta(name="mobile-web-app-capable" content="yes")
+      meta(name="apple-mobile-web-app-status-bar-style", content="#000000")
+      meta(name="apple-mobile-web-app-capable" content="yes")
+      meta(name="apple-mobile-web-app-title" content="Orfo")
+      meta(name="msapplication-config" content="img/favicon/browserconfig.xml")
+      meta(name="msapplication-navbutton-color", content="#000000")
+      meta(name="msapplication-TileColor" content="#000000")
+      meta(name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png")
+      meta(name="theme-color" content="#000000")
+      meta(name="msapplication-starturl" content="/index.html")
+    link(rel="stylesheet" href="")
+    block title
+      title Document
+  body
+    block header
+      +header()
+      //- +header-for-client()
+
+    block main
+
+    block footer
+      +footer()
+    .overlay.fade.only-mobile
+
+    block additionalScripts
+
+    block styles
+      link(rel="preload" href="css/style.min.css" media="screen" as="style" onload="this.onload=null;this.rel='stylesheet'")
+      link(rel="preload" href="css/min-width-768px.min.css" media="screen and (min-width:768px)" as="style" onload="this.onload=null;this.rel='stylesheet'")
+      link(rel="preload" href="css/min-width-1024px.min.css" media="screen and (min-width:1024px)" as="style" onload="this.onload=null;this.rel='stylesheet'")
+      link(rel="preload" href="css/min-width-1220px.min.css" media="screen and (min-width:1220px)" as="style" onload="this.onload=null;this.rel='stylesheet'")
+
+      noscript
+        link(rel="stylesheet" href="css/style.min.css" media="screen")
+        link(rel="stylesheet" href="css/min-width-768px.min.css" media="screen and (min-width:768px)")
+        link(rel="stylesheet" href="css/min-width-1024px.min.css" media="screen and (min-width:1024px)")
+        link(rel="stylesheet" href="css/min-width-1220px.min.css" media="screen and (min-width:1220px)")
+
+    block scripts
+      script(src="js/script.min.js")
+      script.
+        svg4everybody();
+

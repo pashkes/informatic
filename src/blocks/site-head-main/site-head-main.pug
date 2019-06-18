@@ -1,0 +1,20 @@
+mixin site-head-main()
+	.site-head.site-head-main.bg-accent-1.text-white
+		.container
+			section.row-unbroken
+				.col-12.col-sm-7
+					.site-head-main__content
+						h1.h1.site-head-main__title Ведущий разработчик лингвистических программ
+						p Разрабатываем и&nbsp;реализуем решения в&nbsp;области лингвистических технологий с&nbsp;1989&nbsp;года
+						a(href="#contact").site-head-main__btn-desctop.btn.btn-primary связаться с нами
+				.col-12.col-sm-5
+					.site-head-main__media
+						+retinaImg({
+							name: 'informatic',
+							ext: 'png',
+							alt: 'informatic',
+							width: 571,
+							height: 390
+						})
+
+						a(href="#contact").site-head-main__btn-mobile.btn.btn-primary связаться с нами

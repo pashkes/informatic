@@ -1,0 +1,37 @@
+// Here goes BEM-block styles  .site-head-opportunities
+// and it elements, modifier, pseudoselectors, @media-queries...
+
+.site-head-default {
+  padding-top: 48px;
+
+  > *:last-child {
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    max-width: 840px;
+  }
+
+  &__news-page {
+    max-width: 864px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  @media (min-width: map-get($grid-breakpoints, sm)) {
+    padding-top: 12px;
+
+    > *:last-child {
+      margin-bottom: 48px;
+    }
+  }
+}

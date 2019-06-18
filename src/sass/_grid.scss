@@ -1,0 +1,127 @@
+$gap: 8px;
+$grid-columns: 12;
+$grid-gutter-width: 6*$gap !default;
+$grid-breakpoints: (xs: 0, sm: 768px, md: 1024px, lg: 1220px);
+$container-max-widths: (xs: 624px, sm: 742px, md: 992px, lg: 1152px);
+
+@import '../../node_modules/bootstrap/scss/bootstrap-grid';
+
+.container {
+  padding-left: 2*$gap;
+  padding-right: 2*$gap;
+
+  @media (min-width: map-get($grid-breakpoints, sm)) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.row-unbroken {
+  display: flex;
+  flex-wrap: wrap;
+
+  [class^="col"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+[class^="col"] {
+  >* {
+    height: 100%;
+  }
+}
+
+.row {
+  margin-left: -$gap;
+  margin-right: -$gap;
+
+  @media (min-width: map-get($grid-breakpoints, md)) {
+    margin-left: -2*$gap;
+    margin-right: -2*$gap;
+  }
+
+  @media (min-width: map-get($grid-breakpoints, lg)) {
+    margin-left: -3*$gap;
+    margin-right: -3*$gap;
+  }
+}
+
+@for $i from 1 through 12 {
+
+  .col-#{$i},
+  .col-sm-#{$i} {
+    padding-left: $gap;
+    padding-right: $gap;
+  }
+
+  @media (min-width: map-get($grid-breakpoints, md)) {
+
+    .col-#{$i},
+    .col-sm-#{$i},
+    .col-md-#{$i} {
+      padding-left: 2*$gap;
+      padding-right: 2*$gap;
+    }
+  }
+
+  @media (min-width: map-get($grid-breakpoints, lg)) {
+
+    .col-#{$i},
+    .col-sm-#{$i},
+    .col-md-#{$i},
+    .col-lg-#{$i} {
+      padding-left: 3*$gap;
+      padding-right: 3*$gap;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+
+  &.hidden-upto-sm {
+    @media (min-width: map-get($grid-breakpoints, sm)) {
+      display: block;
+    }
+  }
+
+  &.hidden-upto-md {
+    @media (min-width: map-get($grid-breakpoints, md)) {
+      display: block;
+    }
+  }
+
+  &.hidden-upto-lg {
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+      display: block;
+    }
+  }
+}
+
+.hidden-from {
+
+  &-sm,
+  &-md,
+  &-lg {
+    display: block;
+  }
+
+  @media (min-width: map-get($grid-breakpoints, sm)) {
+    &-sm {
+      display: none;
+    }
+  }
+
+  @media (min-width: map-get($grid-breakpoints, md)) {
+    &-md {
+      display: none;
+    }
+  }
+
+  @media (min-width: map-get($grid-breakpoints, lg)) {
+    &-lg {
+      display: none;
+    }
+  }
+}

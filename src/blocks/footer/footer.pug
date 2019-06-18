@@ -1,0 +1,40 @@
+mixin footer(url="relative")
+	.footer
+		.container
+			.footer__main
+				.row
+					.col-12.col-sm-4.col-lg-3
+						.footer__additional
+							.footer__info
+								address.footer__address.
+									Москва, Верейская&nbsp;29, строение 134
+									Бизнес-центр &laquo;Верейская плаза&nbsp;3&raquo;
+								a(href="tel:+74951260866").footer__tel +7 495 126-08-66
+					.col-12.col-lg-9
+						.footer__col
+							ul.footer__nav
+								li
+									a(href=url==='relative' ? "#solutions":'index.html#solutions').footer__link oem Решения
+								li
+									a(href=url==='relative' ? "#about":'index.html#about').footer__link о компании
+								li
+									a(href=url==='relative' ? "#products":'index.html#products').footer__link продукты
+								li
+									a(href=url==='relative' ? "#for-developers":'index.html#for-developers').footer__link разработчикам
+								li
+									a(href=url==='relative' ? "#partners":'index.html#partners').footer__link партнеры
+								li
+									a(href=url==='relative' ?"#support":'index.html#support').footer__link поддержка
+								li
+									a(href=url==='relative' ? "#contact":'index.html#contact').footer__link контакты
+							+social()
+
+			.footer__additional-info
+				.row
+					.col-12.col-sm-6.col-md-5
+						p.footer__copyright
+							| #[span.copy &copy;]&nbsp;ООО &laquo;Информатик&raquo;, 1989-2019.&nbsp;
+							span Все права защищены
+					.col-12.col-sm-6.col-md-7
+						p.footer__develop-name  Сайт разработан в&nbsp;студии&nbsp;
+							a.link.link-dark(href="#") WATT

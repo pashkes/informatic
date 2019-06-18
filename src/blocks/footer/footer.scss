@@ -1,0 +1,191 @@
+.footer {
+  margin-top: auto;
+  background-color: $dark-navy;
+  color: white;
+
+  &__main {
+    padding-top: 40px;
+    padding-bottom: 38px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+    @media(min-width: map-get($grid-breakpoints, md)) {
+      padding-top: 32px;
+      padding-bottom: 22px;
+    }
+  }
+
+  &__additional {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    @media(min-width: map-get($grid-breakpoints, lg)) {
+      flex-direction: row;
+      padding-top: 16px;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 24px;
+    width: 248px;
+    height: 24px;
+
+    @media(min-width: map-get($grid-breakpoints, lg)) {
+      display: none;
+    }
+  }
+
+  &__info {
+    max-width: 232px;
+  }
+
+  &__address {
+    margin-bottom: 12px;
+    font-style: normal;
+    font-weight: 400;
+
+    @media(min-width: map-get($grid-breakpoints, md)) {
+      font-size: 14px;
+    }
+  }
+
+  &__tel {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    transition: $animation;
+
+    @media(min-width: map-get($grid-breakpoints, md)) {
+      margin-bottom: 0;
+    }
+
+    &:hover,
+    &:focus {
+      color: $accent-2;
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+
+    @media(min-width: map-get($grid-breakpoints, lg)) {
+      align-items: flex-end;
+    }
+  }
+
+  &__nav {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    @media(min-width: map-get($grid-breakpoints, md)) {
+      flex-direction: row;
+      margin-bottom: 20px;
+      margin-left: -16px;
+    }
+    @media(min-width: map-get($grid-breakpoints, lg)) {
+      margin-left: 0;
+    }
+
+    li {
+      padding-left: 0;
+
+      &:last-child {
+        @media(min-width: map-get($grid-breakpoints, md)) {
+          margin-right: 0;
+        }
+      }
+
+      @media(min-width: map-get($grid-breakpoints, md)) {
+        margin: 0 16px;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 8px 0;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: $animation;
+
+    &:hover,
+    &:focus {
+      color: $accent-2;
+    }
+
+    @media(min-width: map-get($grid-breakpoints, md)) {
+      padding: 16px 0;
+    }
+  }
+
+  &__additional-info {
+    padding-top: 16px;
+    padding-bottom: 24px;
+    text-align: center;
+    font-size: 13px;
+
+    .link-dark {
+
+      &:hover,
+      &:focus {
+        background-image: linear-gradient(0deg, $accent-2 1px, rgba(255, 255, 255, 0) 1px);
+      }
+    }
+
+    p {
+      font-size: inherit;
+    }
+
+    @media(min-width: map-get($grid-breakpoints, sm)) {
+      text-align: left;
+    }
+
+    @media(min-width: map-get($grid-breakpoints, md)) {
+      padding-top: 24px;
+      padding-bottom: 48px;
+      font-size: 15px;
+    }
+  }
+
+  &__copyright {
+    margin-bottom: 14px;
+
+    @media(min-width: map-get($grid-breakpoints, md)) {
+      margin-bottom: 0;
+    }
+
+    span {
+      display: block;
+
+      @media(min-width: map-get($grid-breakpoints, md)) {
+        display: inline;
+      }
+    }
+
+    .copy {
+      position: relative;
+      bottom: 2px;
+      display: inline;
+    }
+  }
+
+  &__develop-name {
+    @media(min-width: map-get($grid-breakpoints, sm)) {
+      text-align: right;
+    }
+  }
+}

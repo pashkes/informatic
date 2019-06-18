@@ -1,0 +1,9 @@
+mixin social(data)
+  ul.social&attributes(attributes)
+    li.social__item
+      a(href="#" target="_blank" rel="noopener" title="Наш Фейсбук").social__link
+        +icon('fb', 13, 20)
+    li.social__item
+      a(href="#" target="_blank" rel="noopener" title="Наш Вконтакте").social__link
+        +icon('vk', 23, 20)
+

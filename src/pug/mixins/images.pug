@@ -1,0 +1,11 @@
+mixin icon(iconName, width, height)
+  svg(role="img" class="icon" width=width height=height aria-hidden="true")&attributes(attributes)
+    use(xlink:href="img/svg-symbols.svg#"+iconName)
+
+mixin retinaImg(img)
+  img(
+    src="img/" + img.name + "."+img.ext,
+    alt=img.alt,
+    width=img.width,
+    height=img.height
+  )&attributes(attributes)

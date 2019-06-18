@@ -1,0 +1,66 @@
+// Here goes BEM-block styles  .faq
+// and it elements, modifier, pseudoselectors, @media-queries...
+
+.faq {
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+
+  @media(min-width: map-get($grid-breakpoints, sm)) {
+    margin-bottom: 48px;
+  }
+
+  .faq__text {
+    margin-top: 12px;
+  }
+
+  &__accordion {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  &__more {
+    margin-top: 24px;
+    padding-bottom: 16px;
+    text-align: center;
+    .btn {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: map-get($grid-breakpoints, sm)) {
+    padding-bottom: 24px;
+
+    &__accordion {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+
+    &__more {
+      margin-top: 32px;
+      padding-bottom: 24px;
+
+      .btn {
+        max-width: 260px;
+        width: 100%;
+      }
+    }
+  }
+
+  @media (min-width: map-get($grid-breakpoints, md)) {
+    &__accordion {
+      padding-left: 56px;
+      padding-right: 56px;
+    }
+
+    &__more {
+      margin-top: 56px;
+    }
+  }
+
+  @media (min-width: map-get($grid-breakpoints, lg)) {
+    &__accordion {
+      padding-left: 96px;
+      padding-right: 96px;
+    }
+  }
+}

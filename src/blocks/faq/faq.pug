@@ -1,0 +1,38 @@
+mixin faq-icon()
+	svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 10 10' aria-hidden="true" width="10" height="10")
+		path(d='M0 4h10v2H0z')
+		path.for-plus(d='M4 0h2v10H4z')
+
+
+
+mixin faq()
+	section.faq.bg-white&attributes(attributes)
+		.section-head
+			h2.h2.faq__title Ответы на&nbsp;часто задаваемые вопросы
+			p.faq__text Нужен текст справочнике рассматриваются наиболее часто возникающие вопросы, относящиеся к&nbsp;русскому языку. #[br]Описание приводится на&nbsp;уровне требований школьной программы по&nbsp;русскому языку.
+		.faq__accordion
+			.accordion
+				article.accordion__item
+					h5.h5.accordion__title(data-houdini-toggle="faq-1")
+						span В&nbsp;MS&nbsp;Word существует модуль проверки орфографии. Превосходит&nbsp;ли ОРФО его по&nbsp;возможностям?
+						+faq-icon()
+					.houdini-accordion.accordion__group(data-houdini-group="faq" id="faq-1")
+						p.accordion__text Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Осталось, пояс. Снова текстов своих, предупредила гор даль строчка семь, толку великий переписали деревни коварный власти речью, жаренные все назад?
+
+
+				article.accordion__item
+					h5.h5.accordion__title(data-houdini-toggle="faq-2")
+						span Что такое дополнительные словники ОРФО?
+						+faq-icon()
+					.houdini-accordion.accordion__group(data-houdini-group="faq" id="faq-2")
+						p.accordion__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur doloribus, ipsum ea voluptates necessitatibus beatae repudiandae? Provident accusamus tempora totam velit ab aspernatur asperiores alias eius nisi, illo itaque earum.
+
+				article.accordion__item
+					h5.h5.accordion__title(data-houdini-toggle="faq-3")
+						span В&nbsp;чем отличие ОРФО с&nbsp;английским интерфейсом от&nbsp;ОРФО с&nbsp;русским?
+						+faq-icon()
+					.houdini-accordion.accordion__group(data-houdini-group="faq" id="faq-3")
+						p.accordion__text В&nbsp;версии 2016&nbsp;вы имеете возможность выбрать интерфейс установки при работе на&nbsp;локализованной&nbsp;ОС с&nbsp;русским интерфейсом. Если вы&nbsp;работаете на&nbsp;ОС с&nbsp;интерфейсом на&nbsp;другом языке, английский интерфейс ОРФО будет установлен автоматически. Это связано с&nbsp;тем, что на&nbsp;ОС с&nbsp;нерусской локализацией, некоторые диалоги на&nbsp;русском языке могут отображаться некорректно.
+
+			.faq__more
+				a(href="faq.html").btn.btn-outline-secondary посмотреть все вопросы

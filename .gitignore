@@ -1,0 +1,11 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+node_modules/
+.idea/
+/src/**/*.html
+/src/css/*.css
+/src/js/script.min.js
+/src/img/svg-symbols.svg
+/src/img/svg-symbols.scss
+/src/img/svg-symbols-demo-page.html
+www/
+build/

@@ -1,0 +1,30 @@
+mixin opportunities()
+	section.opportunities
+		h2.h2.opportunities__title Морфологические модули для разработчиков
+		.opportunities__slider
+			button.nav.nav-prev(type="button" data-prev aria-label="Назад")
+				+icon('arrow-left', 36, 36)
+			button.nav.nav-next(type="button" data-next aria-label="Вперед")
+				+icon('arrow-right', 36, 36)
+			ul.opportunities__items(data-slider)
+				li.opportunities__item
+					article.opportunity
+						.opportunity__content
+							h3.h3.opportunity__title Проверка грамматики
+							p.opportunity__text Проверка грамматики (Russian Grammar)&nbsp;&mdash; проверяет более 40&nbsp;различных грамматических правил русского языка, включая расстановку запятых. На&nbsp;тестах обнаруживает более&nbsp;50% распространенных грамматических и&nbsp;синтаксических ошибок. Модуль на&nbsp;выходе выдает текстовое описание ошибки, а&nbsp;также часть предложения (абзаца), где ошибка найдена.
+							p Продукт поставляется в&nbsp;виде динамической библиотеки (*.dll) для Windows.
+						.opportunity__media
+							.opportunity__img
+				li.opportunities__item
+					article.opportunity
+						.opportunity__content.wide
+							h3.h3.opportunity__title Морфологические библиотеки
+							p.opportunity__text Морфологические библиотеки&nbsp;&mdash; объединяют несколько модулей предназначенных для морфологического анализа слов и&nbsp;позволяют решить следующие задачи:
+							ul.white
+								li
+									| #[strong Приведение слов к&nbsp;словарной форме.] Для поиска одной формы слова по&nbsp;другой его форме. Этот модуль приводит слова к&nbsp;словарной форме в&nbsp;соответствии с&nbsp;информацией из&nbsp;основного словаря или пополняемого морфологического словаря пользователя неограниченного объема. Для каждого слова дополнительно сообщается часть речи и&nbsp;4-х байтный цифровой хэш-код (hash-code), с&nbsp;помощью которого можно индексировать тексты;
+								li
+									| #[strong Синтез всех форм заданного слова.] Модуль выдает все формы заданного слова, если оно находится в&nbsp;основном словаре или...
+							.opportunity__footer
+								a(href="article.html").btn.btn-outline-light ознакомиться подробнее
+

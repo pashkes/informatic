@@ -1,0 +1,18 @@
+// colors
+$accent-1: #2E3966;
+$accent-2: #6A7FD4;
+$accent-3: #5E70BA;
+$dark-navy: #2D303F;
+$dark-grey: #383838;
+$grey: #ACADAD;
+$light-grey: #D1D1D1;
+$light-grey-2: #E5E9E9;
+$black: #000000;
+$dark-white: #F4F4F4;
+$white: #ffffff;
+$error: lighten(red, 15%);
+
+// easing function
+$animation: all .15s ease-in-out;
+$transition-fade: opacity .15s linear !default;
+$transition-collapse: height .35s ease !default;

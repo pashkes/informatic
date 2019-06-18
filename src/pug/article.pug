@@ -1,0 +1,19 @@
+extends template/template
+
+block title
+  title Информатик | article page
+
+block header
+  +header('static')
+
+
+block main
+  main.main
+    section.site-head.site-head-news.text-dark-grey
+      .container
+        .site-head-news__content
+          h1.h1.site-head-news__title Морфологические библиотеки
+    .container
+      +news-article()
+block footer
+  +footer('static')

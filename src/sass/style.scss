@@ -1,0 +1,25 @@
+/* purgecss start ignore */
+@import 'node_modules/choices.js/src/styles/choices.scss';
+@import 'node_modules/tiny-slider/src/tiny-slider';
+
+@import 'mixins';
+@import 'fonts';
+@import 'ui-kit';
+@import 'utilities';
+@import 'animation';
+@import 'blocks';
+
+@import '../blocks/forms/forms';
+@import '../blocks/header/header';
+@import '../blocks/footer/footer';
+@import '../blocks/social/social';
+@import '../blocks/site-head-main/site-head-main';
+@import '../blocks/opportunities/opportunities';
+@import '../blocks/odds/odds';
+@import '../blocks/faq/faq';
+@import '../blocks/site-head-default/site-head-default';
+@import '../blocks/news-article/news-article';
+@import '../blocks/products-slider/products-slider';
+@import '../blocks/slider-about/slider-about';
+@import '../blocks/products/products';
+@import '../blocks/contact-form/contact-form';
