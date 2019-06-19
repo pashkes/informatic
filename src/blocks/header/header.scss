@@ -231,6 +231,9 @@ $header-height: 48px;
       .header__link {
         color: $accent-2;
       }
+      .header__arrow {
+        transform: rotate(-90deg);
+      }
     }
 
     &.select-lang {

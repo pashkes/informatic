@@ -404,7 +404,7 @@ gulp.task('build', gulp.series('scripts', 'critical',
 		.pipe(svgo())
 		.pipe(gulp.dest(PATH.BUILD.IMG))
 
-	gulp.src(['src/img/svg-symbols.svg'])
+	gulp.src(['src/img/svg-symbols.svg'],{ allowEmpty: true })
 		.pipe(imagemin([
 			imagemin.gifsicle(),
 			imageminMozjpeg(),
