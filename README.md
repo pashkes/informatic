@@ -1,5 +1,3 @@
-# ORFO.RU site markup
-
 # npm i
 install npm packages
 

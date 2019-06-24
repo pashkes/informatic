@@ -4,7 +4,6 @@ node_modules/
 /src/**/*.html
 /src/css/*.css
 /src/js/script.min.js
-/src/img/svg-symbols.svg
 /src/img/svg-symbols.scss
 /src/img/svg-symbols-demo-page.html
 www/

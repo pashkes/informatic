@@ -6,11 +6,7 @@
   padding-bottom: 96px;
 
   &--products {
-    padding-top: 122px;
-
-    @media(min-width: map-get($grid-breakpoints, lg)) {
-      padding-top: 158px;
-    }
+    padding-top: 96px;
 
     div.tns-nav {
       @media(min-width: map-get($grid-breakpoints, md)) {
@@ -20,12 +16,16 @@
 
 
     .opportunity__title {
+      padding-top: 28px;
       font-size: 24px;
       line-height: 1.2;
 
       @media(min-width: map-get($grid-breakpoints, md)) {
         font-size: 30px;
         line-height: 1.1;
+      }
+      @media(min-width: map-get($grid-breakpoints, lg)) {
+          padding-top: 62px;
       }
     }
 
@@ -138,8 +138,8 @@
   }
 
   &__title {
-    margin-top: 24px;
-    margin-bottom: 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
     text-align: center;
   }
 
@@ -166,15 +166,15 @@
 
   @media (min-width: map-get($grid-breakpoints, sm)) {
     &__title {
-      margin-top: 48px;
-      margin-bottom: 40px;
+      padding-top: 48px;
+      padding-bottom: 40px;
     }
   }
 
   @media (min-width: map-get($grid-breakpoints, md)) {
     &__title {
-      margin-top: 64px;
-      margin-bottom: 56px;
+      padding-top: 64px;
+      padding-bottom: 56px;
     }
 
     &__slider {
