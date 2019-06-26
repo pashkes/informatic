@@ -376,6 +376,6 @@ modals.init();
 
 // smooth scroll
 const scroll = new SmoothScroll('a[href*="#"]', {
-  header: '[data-scroll-header]',
+  offset: 116,
   speedAsDuration: true,
 });
