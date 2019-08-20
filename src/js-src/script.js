@@ -228,7 +228,7 @@ window.addEventListener('load', () => {
 const BREAKPOINTS = {
   sm: '(min-width: 768px)',
   md: '(min-width: 1024px)',
-  lg: '(min-width: 1344px)'
+  lg: '(min-width: 1220px)'
 };
 
 
