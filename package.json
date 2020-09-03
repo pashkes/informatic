@@ -45,7 +45,7 @@
     "gulp-util": "^3.0.8",
     "houdinijs": "^11.0.2",
     "imagemin-pngquant": "^7.0.0",
-    "lazysizes": "^4.1.6",
+    "lazysizes": "^5.2.1",
     "postcss-flexbugs-fixes": "^4.1.0",
     "postcss-inline-svg": "^3.0.0",
     "through": "^2.3.8",
